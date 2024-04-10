@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+}
+
+#cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#container {
+    border: 2px solid #333;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+    img {
+        border: 2px solid #3498db;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #333;
+        border-radius: 10px;
+
+    }
+
+}
+
+#result {
+    width: 300px;
+    height: fit-content;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3498db;
+    font-size: 18px;
+}
+
+
+.clickedClass {
+    transition: transform 1s, background-color 3s;
+    transform: rotateY(180deg);
+    /* transform-style: preserve-3d; */
+
+}
+
+.containerClicked {
+
+    img {
+        transition: transform 1s, background-color 3s;
+        transform: rotateY(360deg);
+    }
+}
+
+/* .rotate {
+    transform: rotateY(90deg);
+} */
+
+
+
+
+.shakeCard{
+    animation: shake 0.35s ease-in-out;
+  }
+
+
+  @keyframes shake {
+    0%, 100%{
+      transform: translateX(0);
+    }
+    20%{
+      transform: translateX(-13px);
+    }
+    40%{
+      transform: translateX(13px);
+    }
+    60%{
+      transform: translateX(-8px);
+    }
+    80%{
+      transform: translateX(8px);
+    }
+  }
